@@ -1,9 +1,43 @@
-import React from 'react'
+import React from "react";
+import "./home.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import { cloudName, home } from "../cloud/CloudImages";
+import { Image, Transformation } from "cloudinary-react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div className="home">
+      <div>
+        <div className="logo">
+          <Image className="home1" cloudName={cloudName} publicId={home.home1}>
+            <Transformation crop="scale" width="200" angle="0" />
+          </Image>
+          <Image className="home2" cloudName={cloudName} publicId={home.home2}>
+            <Transformation crop="scale" width="200" angle="0" />
+          </Image>
+          <Image className="home3" cloudName={cloudName} publicId={home.home3}>
+            <Transformation crop="scale" width="200" angle="0" />
+          </Image>
+          <Image className="home4" cloudName={cloudName} publicId={home.home4}>
+            <Transformation crop="scale" width="200" angle="0" />
+            <Image
+              className="home5"
+              cloudName={cloudName}
+              publicId={home.home5}
+            >
+              <Transformation crop="scale" width="200" angle="0" />
+            </Image>
+          </Image>
+        </div>
+        <div className="btn7">
+          <Link to="/signup">
+            <button className="start1">Get Started</button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default Home
+export default Home;

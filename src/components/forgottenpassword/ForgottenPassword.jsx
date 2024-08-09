@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./forgottenpassword.css";
 import { cloudName, logo } from "../cloud/CloudImage";
-// import { Image, Transformation } from "cloudinary-react";
+import { Image, Transformation } from "cloudinary-react";
 
 const ForgottenPassword = () => {
   return (
